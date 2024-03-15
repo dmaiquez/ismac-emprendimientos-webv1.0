@@ -12,6 +12,11 @@
 </head>
 <body>
 
+<header class="bg-dark text-white px-2 py-2">
+			
+			 <h1 style="text-align: center;">Plataforma de Emprendimientos Biz Bloom S.A.</h1>
+			
+		</header>
 	<nav>
 	<h1> EMPRENDIMIENTOS  </h1>
 		<div class="lista">

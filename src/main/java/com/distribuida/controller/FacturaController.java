@@ -175,24 +175,26 @@ public class FacturaController {
 	@SuppressWarnings("static-access")
 	@GetMapping("/addDetalleTemporal")
 	public String add(@RequestParam("idFDList") @Nullable Integer idFDList,
-	                  @RequestParam("cantidad") @Nullable Integer cantidad,
-	                  @RequestParam("opcionDetalle") @Nullable Integer opcionDetalle,
-	                  ModelMap modelMap) {
-
-	    if (opcionDetalle == 1) {
+            @RequestParam("cantidad") @Nullable Integer cantidad,
+            @RequestParam("opcionDetalle") @Nullable Integer opcionDetalle,
+            ModelMap modelMap) {
+		
+		if (opcionDetalle == 1) {
 	        FacturaDetalle facturaDetalle = this.list.get(idFDList);
-
+	        
 	        if (cantidad != facturaDetalle.getCantidad()) {
-	            double subtotal = 0;
-	            if (cantidad > 5) {
-	                subtotal = facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto() * 0.05 * facturaDetalle.getCantidad();
-	            } else if (cantidad > 10) {
-	                subtotal = facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto() * 0.10 * facturaDetalle.getCantidad();
-	            } else {
-	                subtotal = facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto() * facturaDetalle.getCantidad();
-	            }
-
-	            this.totalNeto = this.totalNeto - subtotal;
+	        	
+	        	double subtotal=0;
+	        	if (cantidad > 5) {
+	        	    subtotal = facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto()*0.05  * facturaDetalle.getCantidad();
+	        	    
+	        	} else if(cantidad > 10) {
+	        		subtotal = facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto()*0.10  * facturaDetalle.getCantidad();
+	        	}else {
+	        		subtotal = facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto() * facturaDetalle.getCantidad();
+	        	}
+	        	
+	        	this.totalNeto = this.totalNeto - subtotal; 
 	            this.totalNeto = getFormatNumber(this.totalNeto + subtotal);
 	            this.iva = getFormatNumber(this.totalNeto * 0.12);
 	            this.total = getFormatNumber(this.totalNeto + this.iva);
@@ -201,18 +203,17 @@ public class FacturaController {
 	    } else {
 	        FacturaDetalle facturaDetalle = this.list.get(idFDList);
 
-	        this.totalNeto = getFormatNumber(this.totalNeto - facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto() * facturaDetalle.getCantidad());
-	        this.iva = getFormatNumber(this.totalNeto * 0.12);
-	        this.total = getFormatNumber(this.totalNeto + this.iva);
-	        del(idFDList);
-	    }
+	            this.totalNeto = getFormatNumber(this.totalNeto - facturaDetalle.getEmpresaProducto().getIdproducto().getPrecioProducto() * facturaDetalle.getCantidad());
+	            this.iva = getFormatNumber(this.totalNeto * 0.12);
+	            this.total = getFormatNumber(this.totalNeto + this.iva);
+	            del(idFDList);
+	        } 
 
 	    load(modelMap);
-
-	    return "redirect:/facturacion/principal";
+        
+        return "redirect:/facturacion/principal";
 	}
-
-
+	
 	//addDetalle
 	@SuppressWarnings({"static-access", "deprecation"})
 	@PostMapping("/addDetalle")
@@ -241,16 +242,15 @@ public class FacturaController {
 
         facturaService.add(0, numFactura, new Date(), totalNeto, iva, total, idCliente, idPedido, idFormaPago);
 
-        this.list.forEach(item -> {            
-           // facturaService.add(0, "producto", item.getCantidad(), item.getSubTotal(), facturaService.findMax(),item.getEmpresaProducto());
-        });
-        
-        this.list.forEach(item -> {
-
-            empresa_productoService.up(0, item.getProducto(), numFactura, idEmpresa, idEmpresa);
-        
-        });
-        
+//        this.list.forEach(item -> {            
+//            facturaService.add(0, item.getCantidad(), item.getSubTotal(), facturaService.findMax(),item.getEmpresaProducto(),item.getProducto());
+//        });
+//        
+//        this.list.forEach(item -> {
+//
+//            empresa_productoService.up(item.getEmpresaProducto().setIdproducto(idProducto));
+//        
+//        });
         clear(modelMap);
         
         return "redirect:/facturacion/principal";

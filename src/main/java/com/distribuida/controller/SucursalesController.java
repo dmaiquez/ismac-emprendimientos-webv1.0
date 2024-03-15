@@ -72,7 +72,7 @@ public class SucursalesController {
 	@GetMapping("/del")
 	public String del(@RequestParam ("idSucursales") @Nullable Integer idSucursales) {
 		sucursalesService.del(idSucursales);
-		return "redirect:/sucursales/findAll";
+		return "redirect:/empresas/findAll";
 		
 	}
 }

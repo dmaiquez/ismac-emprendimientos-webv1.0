@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<header class="bg-dark text-white px-2 py-2">
+			
+			 <h1 style="text-align: center;">Plataforma de Emprendimientos Biz Bloom S.A.</h1>
+			
+		</header>
+
 	<h1>Borrar Forma Pago</h1>
 	
 	<form action="del" method="GET">
