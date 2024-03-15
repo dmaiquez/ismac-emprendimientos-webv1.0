@@ -11,6 +11,7 @@ public interface LoginClienteService {
 	
 	public List<loginCliente> findAll();
 	public loginCliente findOne(int id);
+	
 	public void add(int id, String user, String password, String newpassword, String confirmpassword,
 			String loginCorreo, String loginToken, Date sessiontimeIn, Date sessiontimeOUT, Integer sessiontiempo);
 	
@@ -18,6 +19,7 @@ public interface LoginClienteService {
 			String loginCorreo, String loginToken, Date sessiontimeIn, Date sessiontimeOUT, Integer sessiontiempo);
 	
 	public void del(int id);
+	
 	public List<loginCliente> findAll(String busqueda);
  
 }

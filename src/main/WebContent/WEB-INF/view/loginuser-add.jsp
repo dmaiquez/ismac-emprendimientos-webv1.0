@@ -13,88 +13,92 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/estilos.css" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
 </head>
 <body>
+	<nav>
+	</nav>
+
 	<section class="py-5 px-5">
 		<div class="container" >
-			<h1> Login User </h1>	
+			<h1> Cuentas de Usuarios </h1>	
 			<form action="add" method="POST" class="needs-validation" novalidate >				
 				 <!-- idCliente -->
 				   <div class="form-group">
-				    <label for="id" class="form-label" >Id</label> 
-				  <input type="hidden" id="id_user" name="id_user" value="${loginuser.id_user}"> 
+				    <!-- <label for="id" class="form-label" >Id</label> --> 
+				    <input type="hidden" id="id_user" name="id_user" value="${loginuser.id_user}"> 
 				  <!-- <span class="invalid-feedback">
 				      *
 				     </span> -->
 				   </div>
 				 
 				 <div class="form-group">
-					 <label for="usuario" class="form-label" >Usuario</label>					  
-					 <input type="text" id="user" name="user" value="${loginuser.user}" required>
+					 <label for="user" class="form-label" >Usuario</label>					  
+					 <input type="text" class="form-control" id="user" name="user" value="${loginuser.user}" required>
 					 <!-- <span class="invalid-feedback">
 				      *
 				     </span> -->
 				 </div>
 				 <div class="form-group">
-					 <label for="contraseña:" class="form-label" >Contraseña:</label> 
-					  <input type="text"  id=pasword name="pasword" value="${loginuser.pasword}" required>
+					 <label for="pasword" class="form-label" >Contraseña</label> 
+					  <input type="password" class="form-control"  id="pasword" name="pasword" value="${loginuser.pasword}" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>
 				 <div class="form-group">
-					 <label for="nueva contraseña" class="form-label" >Nueva Contraseña</label> 
-					 <input type="text"  id="new_pasword" name="new_pasword" value="${loginuser.new_pasword}" required>
+					 <label for="new_pasword" class="form-label" >Nueva Contraseña</label> 
+					 <input type="password" class="form-control"  id="new_pasword" name="new_pasword" value="${loginuser.new_pasword}" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>
 				 <div class="form-group">
-					 <label for="confirme contraseña:" class="form-label" >Confirme Contraseña:</label> 
-					  <input type="text"  id="confirm_pasword" name="confirm_pasword" value="${loginuser.confirm_pasword}" required>
+					 <label for="confirm_pasword" class="form-label" >Confirme Contraseña</label> 
+					  <input type="password" class="form-control"  id="confirm_pasword" name="confirm_pasword" value="${loginuser.confirm_pasword}" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>
 				 <div class="form-group">
-					 <label for="correo:" class="form-label" > Correo:</label> 
-					 <input type="email"  id="login_correo" name="login_correo" value="${loginuser.login_correo}" placeholder="example@empresaabc.com.ec" required>
+					 <label for="login_correo" class="form-label" > Correo</label> 
+					 <input type="email" class="form-control"  id="login_correo" name="login_correo" value="${loginuser.login_correo}" placeholder="example@empresaabc.com.ec" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>
 				 <div class="form-group">
-					 <label for="verificación:" class="form-label" >Verificación:</label> 
-					 <input type="text" id="login_token" name="login_token" value="${loginuser.login_token}" required>
+					 <label for="login_token" class="form-label" >Verificación</label> 
+					 <input type="text" class="form-control" id="login_token" name="login_token" value="${loginuser.login_token}" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>		
 				 <div class="form-group">
-					 <label for="tiempo de inicio de sección:" class="form-label" >Tiempo de inicio de sección::</label> 
-					 <input type="date" id="session_time_In" name="session_time_In" value="${fn:substring(loginuser.session_time_In,0,10)}"required>
+					 <label for="session_time_In" class="form-label" >Tiempo de inicio de sección</label> 
+					 <input type="date" class="form-control" id="session_time_In" name="session_time_In" value="${fn:substring(loginuser.session_time_In,0,10)}"required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>
 				 <div class="form-group">
-					 <label for=" tiempo de cierre de sección:" class="form-label" > Tiempo de cierre de sección::</label> 
-					 <input type="date" id="session_time_OUT" name="session_time_OUT" value="${fn:substring(loginuser.session_time_OUT,0,10)}" required>
+					 <label for="session_time_OUT" class="form-label" > Tiempo de cierre de sección</label> 
+					 <input type="date" class="form-control" id="session_time_OUT" name="session_time_OUT" value="${fn:substring(loginuser.session_time_OUT,0,10)}" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>
 				 <div class="form-group">
-					 <label for="tiempo de sección:" class="form-label" >Tiempo de sección::</label> 
-					  <input type="text" id="session_tiempo" name="session_tiempo" value="${loginuser.session_tiempo}" required>
+					 <label for="session_tiempo" class="form-label" >Tiempo de sección</label> 
+					  <input type="number" step="any" class="form-control" id="session_tiempo" name="session_tiempo" value="${loginuser.session_tiempo}" required>
 					 <!-- <div class="invalid-feedback">
 				      *
 				     </div> -->
 				 </div>		 
 				 <div class="container-fluid form-group" role="group" style="padding-top: 5px; text-align: right;">
 					 <button type="submit" class="btn btn-primary">Guardar</button>	
-					 <button type="button" class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos1-web/loginuser/findAll'; return false;">Cancelar</button>
+					 <button type="button" class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos-webv1.0/loginuser/findAll'; return false;">Cancelar</button>
 				 </div>				 				 				 				 	 				 
 			</form>	
 		</div>		

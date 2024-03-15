@@ -29,8 +29,7 @@ public class ProductoController {
 	@Autowired
 	private CategoriaService categoriaService;
 	
-	
-	
+		
 	@GetMapping("/findAll")
 	public String findAll(Model model) {
 		

@@ -47,7 +47,7 @@ public class ClienteServiceImpl implements ClienteService {
 		
 		Cliente cliente1 = new Cliente(idCliente, cedula, nombre, apellido, direccion, telefono, correo, genero, fechadenacimiento, tipoUsuario);
 		
-		cliente1.setTipoUsuario(tipoUsuario);
+		//cliente1.setTipoUsuario(tipoUsuario);
 		
 		clienteDAO.add(cliente1);
 
@@ -61,7 +61,7 @@ public class ClienteServiceImpl implements ClienteService {
 		
 		Cliente cliente1 = new Cliente(idCliente,cedula,nombre,apellido,direccion,telefono,correo,genero,fechadenacimiento, tipoUsuario);
 		
-		cliente1.setTipoUsuario(tipoUsuario);
+		//cliente1.setTipoUsuario(tipoUsuario);
 		
 		clienteDAO.up(cliente1);
 	}

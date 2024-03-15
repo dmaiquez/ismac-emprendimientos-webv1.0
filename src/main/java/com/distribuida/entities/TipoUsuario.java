@@ -16,57 +16,57 @@ public class TipoUsuario {
 	
 
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "idtipoUs")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idtipoUs")
 	private int idtipoUs;
-@Column(name = "TipodeUser")
-    private String TipodeUser;
-@Column(name = "Descripcion")
-    private String Descripcion;
+	@Column(name = "TipodeUser")
+    private String tipodeUser;
+	@Column(name = "Descripcion")
+    private String descripcion;
 
-public TipoUsuario() {
-
-}
-
-public TipoUsuario(int idtipoUs, String tipodeUser, String descripcion) {
+	public TipoUsuario() {
 	
-	this.idtipoUs = idtipoUs;
-	this.TipodeUser = tipodeUser;
-	this.Descripcion = descripcion;
-}
+	}
 
-public int getIdtipoUs() {
-	return idtipoUs;
-}
+	public TipoUsuario(int idtipoUs, String tipodeUser, String descripcion) {
+	
+		this.idtipoUs = idtipoUs;
+		this.tipodeUser = tipodeUser;
+		this.descripcion = descripcion;
+	}
 
-public void setIdtipoUs(int idtipoUs) {
-	this.idtipoUs = idtipoUs;
-}
+	public int getIdtipoUs() {
+		return idtipoUs;
+	}
 
-public String getTipodeUser() {
-	return TipodeUser;
-}
+	public void setIdtipoUs(int idtipoUs) {
+		this.idtipoUs = idtipoUs;
+	}
 
-public void setTipodeUser(String tipodeUser) {
-	TipodeUser = tipodeUser;
-}
+	public String getTipodeUser() {
+		return tipodeUser;
+	}
 
-public String getDescripcion() {
-	return Descripcion;
-}
+	public void setTipodeUser(String tipodeUser) {
+		this.tipodeUser = tipodeUser;
+	}
 
-public void setDescripcion(String descripcion) {
-	Descripcion = descripcion;
-}
+	public String getDescripcion() {
+		return descripcion;
+	}
 
-@Override
-public String toString() {
-	return "TipoUsuario [idtipoUs=" + idtipoUs + ", TipodeUser=" + TipodeUser + ", Descripcion=" + Descripcion + "]";
-}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
+	@Override
+	public String toString() {
+		return "TipoUsuario [idtipoUs=" + idtipoUs + ", tipodeUser=" + tipodeUser + ", descripcion=" + descripcion
+				+ "]";
+	}
 
-
+	
 
 	
 	

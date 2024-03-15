@@ -27,34 +27,33 @@
 	</nav>
 
 	<section class="py-5 px-5">
-	<div class="container" >
-	</div>
+		<div class="container" >
+			<h1> Secciones </h1>
 			<form action="add" method="POST" class="needs-validation" novalidate >				
-				 <!-- idSeccion -->
-				 <input type="hidden" id="idSeccion" name="idSeccion" value="${seccion.idSeccion}">
-				 <br/><br/>
-				 <div class="form-group">
-					 <label for="seccion" class="form-label" >seccion</label>					  
-					 <input type="text" class="form-control" id="seccion" name="seccion" value="${seccion.seccion}" required>
-					 <!-- <span class="invalid-feedback">
-				      *
-				     </span> -->
-				 </div>
-				 <div class="form-group">
-					 <label for="descripcion" class="form-label" >descripcion</label> 
-					 <input type="text" class="form-control" id="descripcion" name="descripcion" value="${seccion.descripcion}" required>
-					 <!-- <div class="invalid-feedback">
-				      *
-				     </div> -->
-				 </div>
-				 
-				 </div>				 
-				 <div class="container-fluid form-group" role="group" style="padding-top: 5px; text-align: right;">
-					 <button type="submit" class="btn btn-primary">Guardar</button>	
-					 <button type="button" class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos1-web/secciones/findAll'; return false;">Cancelar</button>
-				 </div>				 				 				 				 	 				 
-			</form>	
-		</div>		
+						 <!-- idSeccion -->
+						 <input type="hidden" id="idSeccion" name="idSeccion" value="${seccion.idSeccion}">
+						 <br/><br/>
+						 <div class="form-group">
+							 <label for="seccion" class="form-label" >Sección</label>					  
+							 <input type="text" class="form-control" id="seccion" name="seccion" value="${seccion.seccion}" required>
+							 <!-- <span class="invalid-feedback">
+						      *
+						     </span> -->
+						 </div>
+						 <div class="form-group">
+							 <label for="descripcion" class="form-label" >Descripcion</label> 
+							 <input type="text" class="form-control" id="descripcion" name="descripcion" value="${seccion.descripcion}" required>
+							 <!-- <div class="invalid-feedback">
+						      *
+						     </div> -->
+						 </div>
+						 								 
+						 <div class="container-fluid form-group" role="group" style="padding-top: 5px; text-align: right;">
+							 <button type="submit" class="btn btn-primary">Guardar</button>	
+							 <button type="button" class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos-webv1.0/secciones/findAll'; return false;">Cancelar</button>
+						 </div>				 				 				 				 	 				 
+			</form>
+		</div>								
 	</section>
 
 <footer>

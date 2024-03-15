@@ -35,10 +35,10 @@
 
 	<section class="py-5 px-5">
 		<div class="container">
-			<h1> Seccion </h1>
+			<h1> Secciones </h1>
 			
 			<div class="container" style="text-align: center;">
-				<button class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos1-web/secciones/findOne?opcion=1'; return false;">
+				<button class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos-webv1.0/secciones/findOne?opcion=1'; return false;">
 					<i class="fa-solid fa-user-plus">
 					<!-- Agregar -->
 					</i>																
@@ -78,12 +78,12 @@
 								
 								<td>
 									<div class="container-fluid btn-group" role="group" >
-										<button class="btn btn-success" onclick="window.location.href='/ismac-emprendimientos1-web/secciones/findOne?idSeccion=${item.idSeccion}&opcion=1'; return false;">
+										<button class="btn btn-success" onclick="window.location.href='/ismac-emprendimientos-webv1.0/secciones/findOne?idSeccion=${item.idSeccion}&opcion=1'; return false;">
 											<i class="fa-solid fa-rotate-left">
 											<!-- Actualizar -->
 											</i>																			
 										</button>
-										<button class="btn btn-danger" onclick="window.location.href='/ismac-emprendimientos1-web/secciones/findOne?idSeccion=${item.idSeccion}&opcion=2'; return false;">
+										<button class="btn btn-danger" onclick="window.location.href='/ismac-emprendimientos-webv1.0/secciones/findOne?idSeccion=${item.idSeccion}&opcion=2'; return false;">
 											<i class="fa-solid fa-trash">
 											<!-- Eliminar -->
 											</i>											

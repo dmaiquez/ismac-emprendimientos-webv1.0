@@ -20,11 +20,11 @@
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/loginuser/findAll">login_user</a></ul>
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/loginclientes/findAll">login_cliente</a></ul>
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/tipousuarios/findAll">tipo_usuario</a></ul>
-			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/usuario/findAll">usuario</a></ul>
+			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/usuarios/findAll">usuario</a></ul>
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/clientes/findAll">cliente</a></ul>
+			<ul style="display: inline"><a href="${pageContext.request.contextPath}/secciones/findAll"> Secciones</a></ul>
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/categorias/findAll">Categorias</a></ul>
-			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/productos/findAll">Productos</a></ul>
-			<ul style="display: inline"><a href="${pageContext.request.contextPath}/secciones/findAll"> Secciones</a></ul>	
+			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/productos/findAll">Productos</a></ul>				
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/sucursales/findAll">Sucursales</a></ul>
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/empresas/findAll">Empresas</a></ul>
 			<ul style="display: inline;"><a href="${pageContext.request.contextPath}/empresaDetalles/findAll">EmpresasDetalles</a></ul>
@@ -48,7 +48,7 @@
 	</nav>
 	</section>
 	<footer>
-		<div style="text-align: center"><p> Copyright &copy; Empresa ABC S.A. - 2024 Todos los derechos reservados.</p></div>
+		<div style="text-align: center"><p > Copyright &copy; Plataforma de Emprendimientos Biz Bloom S.A. - 2024 - Todos los derechos reservados.</p></div>
 	</footer>
 
 	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>

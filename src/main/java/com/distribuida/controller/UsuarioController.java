@@ -24,7 +24,7 @@ import com.distribuida.entities.Usuario;
  
  
 @Controller
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 public class UsuarioController {
 	
 	@Autowired
@@ -36,8 +36,8 @@ public class UsuarioController {
 	@GetMapping("/findAll")
 	public String findAll(Model model) {
 		
-		List<Usuario> usuario = usuarioService.findAll();
-		model.addAttribute("usuario",usuario);
+		List<Usuario> usuarios = usuarioService.findAll();
+		model.addAttribute("usuarios",usuarios);
  
 		return "usuario-listar";
 		
@@ -83,7 +83,7 @@ public class UsuarioController {
 		if(idUsuario == null) usuarioService.add(0, nombre, apellido,fechadenacimiento, cedula, telefono, correo, direccion, genero, idtipoUs);
 		else usuarioService.up(idUsuario, nombre, apellido,fechadenacimiento,  cedula, telefono, correo, direccion, genero, idtipoUs);
 		
-		return "redirect:/usuario/findAll";
+		return "redirect:/usuarios/findAll";
 	}
 	
 	@GetMapping("/del")
@@ -91,7 +91,7 @@ public class UsuarioController {
 		
 		usuarioService.del(idUsuario);
  
-		return "redirect:/usuario/findAll";
+		return "redirect:/usuarios/findAll";
 	}
  
  

@@ -38,8 +38,8 @@ public class TipoUsuarioController {
 				, Model model) {
 		
 			if(idtipoUs != null) {
-				TipoUsuario tipoUsuarios = tipoUsuarioService.findOne(idtipoUs); 
-				model.addAttribute("tipoUsuarios",tipoUsuarios);
+				TipoUsuario tipoUsuario = tipoUsuarioService.findOne(idtipoUs); 
+				model.addAttribute("tipoUsuario",tipoUsuario);
 			}
 			
 			if(opcion == 1) return "tipousuarios-add";

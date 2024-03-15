@@ -42,7 +42,7 @@
 			  	<strong>¿Desea eliminar el dato?</strong>
 			  	<div class="container-fluid form group" role="group" style="text-align: right;">
 				  	<button type="submit" class="btn btn-primary">Guardar</button>
-				 	<button type="button" class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos1-web/categorias/findAll';return false;">Cancelar</button>
+				 	<button type="button" class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos-webv1.0/categorias/findAll';return false;">Cancelar</button>
 			  	</div>			  				  	
 		  	</form>
 		</div>			

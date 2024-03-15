@@ -28,11 +28,11 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idUsuario")
-		private int idUsuario;
+	private int idUsuario;
 	@Column(name = "nombre")
-	    private String nombre;
+	private String nombre;
 	@Column(name = "apellido")
-	    private String apellido;
+	private String apellido;
 	@Column(name = "fechadenacimiento")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechadenacimiento;
@@ -49,6 +49,7 @@ public class Usuario {
 	
 	
 	
+	
 	@ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	@JoinColumn(name = "fk_idtipoUs")
 	private TipoUsuario tipoUsuario;
@@ -57,16 +58,10 @@ public class Usuario {
 	public Usuario() {
 
 	}
-	
-	
-
-
-
 
 
 	public Usuario(int idUsuario, String nombre, String apellido, Date fechadenacimiento, String cedula,
 			String telefono, String correo, String direccion, String genero, TipoUsuario tipoUsuario) {
-	
 		this.idUsuario = idUsuario;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -79,25 +74,13 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
 
 	public int getIdUsuario() {
 		return idUsuario;
 	}
-
-
-
-
-
 
 
 	public void setIdUsuario(int idUsuario) {
@@ -105,19 +88,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getNombre() {
 		return nombre;
 	}
-
-
-
-
-
 
 
 	public void setNombre(String nombre) {
@@ -125,19 +98,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getApellido() {
 		return apellido;
 	}
-
-
-
-
-
 
 
 	public void setApellido(String apellido) {
@@ -145,26 +108,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 	public Date getFechadenacimiento() {
 		return fechadenacimiento;
 	}
-
-
-
-
-
 
 
 	public void setFechadenacimiento(Date fechadenacimiento) {
@@ -172,19 +118,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getCedula() {
 		return cedula;
 	}
-
-
-
-
-
 
 
 	public void setCedula(String cedula) {
@@ -192,19 +128,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getTelefono() {
 		return telefono;
 	}
-
-
-
-
-
 
 
 	public void setTelefono(String telefono) {
@@ -212,19 +138,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getCorreo() {
 		return correo;
 	}
-
-
-
-
-
 
 
 	public void setCorreo(String correo) {
@@ -232,19 +148,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getDireccion() {
 		return direccion;
 	}
-
-
-
-
-
 
 
 	public void setDireccion(String direccion) {
@@ -252,19 +158,9 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public String getGenero() {
 		return genero;
 	}
-
-
-
-
-
 
 
 	public void setGenero(String genero) {
@@ -272,29 +168,14 @@ public class Usuario {
 	}
 
 
-
-
-
-
-
 	public TipoUsuario getTipoUsuario() {
 		return tipoUsuario;
 	}
 
 
-
-
-
-
-
 	public void setTipoUsuario(TipoUsuario tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
-
-
-
-
-
 
 
 	@Override
@@ -304,16 +185,7 @@ public class Usuario {
 				+ ", correo=" + correo + ", direccion=" + direccion + ", genero=" + genero + ", tipoUsuario="
 				+ tipoUsuario + "]";
 	}
-
-
-
-
-
-
-
-
-
-	
+		
 	
 	
 }

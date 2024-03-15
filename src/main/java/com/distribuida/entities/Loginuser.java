@@ -74,14 +74,18 @@ public class Loginuser {
 
 
 
-	public int getId() {
+	
+
+
+
+	public int getId_user() {
 		return id_user;
 	}
 
 
 
-	public void setId(int id) {
-		this.id_user = id;
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
 	}
 
 
@@ -196,10 +200,10 @@ public class Loginuser {
 
 	@Override
 	public String toString() {
-		return "Loginuser [id=" + id_user + ", user=" + user + ", pasword=" + pasword + ", new_pasword=" + new_pasword
-				+ ", confirm_pasword=" + confirm_pasword + ", login_correo=" + login_correo + ", login_token="
-				+ login_token + ", Session_time_In=" + Session_time_In + ", Session_time_OUT=" + Session_time_OUT
-				+ ", Session_tiempo=" + Session_tiempo + "]";
+		return "Loginuser [id_user=" + id_user + ", user=" + user + ", pasword=" + pasword + ", new_pasword="
+				+ new_pasword + ", confirm_pasword=" + confirm_pasword + ", login_correo=" + login_correo
+				+ ", login_token=" + login_token + ", Session_time_In=" + Session_time_In + ", Session_time_OUT="
+				+ Session_time_OUT + ", Session_tiempo=" + Session_tiempo + "]";
 	}
 
 	

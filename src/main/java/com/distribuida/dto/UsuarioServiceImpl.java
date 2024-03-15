@@ -58,7 +58,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 		// TODO Auto-generated method stub
 		TipoUsuario tipoUsuario = tipoUsuarioDAO.findOne(fk_idtipoUS);
 		Usuario usuario1 = new Usuario(idUsuario,nombre,apellido,fechadenacimiento,cedula,direccion,telefono,correo,genero, tipoUsuario);
-		usuario1.setTipoUsuario(tipoUsuario);
+		//usuario1.setTipoUsuario(tipoUsuario);
 		usuarioDAO.add(usuario1);
 	}
 
@@ -69,7 +69,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	
 		TipoUsuario tipoUsuario = tipoUsuarioDAO.findOne(fk_idtipoUS);
 		Usuario usuario1 = new Usuario(idUsuario,nombre,apellido,fechadenacimiento,cedula,direccion,telefono,correo,genero, tipoUsuario);
-		usuario1.setTipoUsuario(tipoUsuario);
+		//usuario1.setTipoUsuario(tipoUsuario);
 		usuarioDAO.up(usuario1);
 	}
 

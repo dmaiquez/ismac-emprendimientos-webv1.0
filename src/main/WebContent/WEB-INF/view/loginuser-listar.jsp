@@ -17,10 +17,11 @@
 
 <section class="py-5 px-5">
 		<div class="container">
-			<h1> Agregar Usuarios </h1>
+		
+			<h1> Cuentas de Usuarios </h1>
 			
 			<div class="container" style="text-align: center;">
-				<button class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos1-web/loginuser/findOne?opcion=1'; return false;">
+				<button class="btn btn-primary" onclick="window.location.href='/ismac-emprendimientos-webv1.0/loginuser/findOne?opcion=1'; return false;">
 					<i class="fa-solid fa-user-plus">
 					<!-- Agregar -->
 					</i>																
@@ -39,13 +40,13 @@
 						>
 					<thead>
 						<tr>
-							<th data-field="Id" data-sortable="true" >id_user</th>
+							<!-- <th data-field="Id" data-sortable="true" >id_user</th> -->
 							<th data-field="Usuario" data-sortable="true" >user</th>
 							<th data-field="Pasword" data-sortable="true">password</th>
-							<th data-field="Neew Pasword" data-sortable="true">new_pasword</th>
-							<th data-field="Confir Pasword" data-sortable="true">confirm_pasword</th>
-							<th data-field="Login Correo" data-sortable="true">login_correo</th>
-							<th data-field="Login Token" data-sortable="true">login_token</th>
+							<th data-field="Nuevo Pasword" data-sortable="true">new_pasword</th>
+							<th data-field="Confirmar Pasword" data-sortable="true">confirm_pasword</th>
+							<th data-field="Login por Correo" data-sortable="true">login_correo</th>
+							<th data-field="Login por Token" data-sortable="true">login_token</th>
 							<th data-field="Time In" data-sortable="true">Session_time_In</th>
 							<th data-field="Time Out" data-sortable="true">Session_time_OUT</th>
 							<th data-field="Seccion Tiempo" data-sortable="true">Session_tiempo</th>
@@ -55,24 +56,24 @@
 						<c:forEach var="item" items="${loginuser}">
 							<tr>
 								
-							 	<td>${item.id}</td> 
+							 	<%-- <td>${item.id_user}</td> --%> 
 								<td>${item.user}</td>
-								<td>${item.pasword}</td>
-								<td>${item.new_pasword}</td>
-								<td>${item.confirm_pasword}</td>
-								<td>${item.login_correo}</td>
+								<td><input type="password" value="${item.pasword}" disabled="disabled"></td>
+								<td><input type="password" value="${item.new_pasword}" disabled="disabled"></td>
+								<td><input type="password" value="${item.confirm_pasword}" disabled="disabled"></td>
+								<td>"${item.login_correo}"</td>
 								<td>${item.login_token}</td>
-								<td>${item.session_time_In}</td>
-								<td>${item.session_time_OUT}</td>
+								<td>${fn:substring(item.session_time_In,0,10)}</td>
+								<td>${fn:substring(item.session_time_OUT,0,10)}</td>
 								<td>${item.session_tiempo}</td>
 								<td>
 									<div class="container-fluid btn-group" role="group" >
-										<button class="btn btn-success" onclick="window.location.href='/ismac-emprendimientos1-web/loginuser/findOne?id_user=${item.id}&opcion=1'; return false;">
+										<button class="btn btn-success" onclick="window.location.href='/ismac-emprendimientos-webv1.0/loginuser/findOne?id_user=${item.id_user}&opcion=1'; return false;">
 											<i class="fa-solid fa-rotate-left">
 											<!-- Actualizar -->
 											</i>																			
 										</button>
-										<button class="btn btn-danger" onclick="window.location.href='/ismac-emprendimientos1-web/loginuser/findOne?id_user=${item.id}&opcion=2'; return false;">
+										<button class="btn btn-danger" onclick="window.location.href='/ismac-emprendimientos-webv1.0/loginuser/findOne?id_user=${item.id_user}&opcion=2'; return false;">
 											<i class="fa-solid fa-trash">
 											<!-- Eliminar -->
 											</i>											

@@ -69,16 +69,6 @@ public class loginClienteImplDao implements loginClienteDao {
 				session.delete(findOne(id));		
 	}
 	
-	
-
-	
-
-
-
-	
-
-
-	
 
  
 }

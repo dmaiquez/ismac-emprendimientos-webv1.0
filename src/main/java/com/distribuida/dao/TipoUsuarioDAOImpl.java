@@ -62,7 +62,7 @@ public class TipoUsuarioDAOImpl implements TipoUsuarioDAO {
 	public void del(int id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(findOne(id));
+		session.delete(findOne(id));
 	}
 
 }

@@ -52,7 +52,6 @@ public class Cliente {
 	}
 
 
-
 	public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono,
 			String correo, String genero, Date fechadenacimiento, TipoUsuario tipoUsuario) {
 		this.idCliente = idCliente;
@@ -68,94 +67,104 @@ public class Cliente {
 	}
 
 
-
 	public int getIdCliente() {
 		return idCliente;
 	}
+
 
 	public void setIdCliente(int idCliente) {
 		this.idCliente = idCliente;
 	}
 
+
 	public String getCedula() {
 		return cedula;
 	}
+
 
 	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
 
 	public String getNombre() {
 		return nombre;
 	}
 
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 
 	public String getApellido() {
 		return apellido;
 	}
 
+
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+
 
 	public String getDireccion() {
 		return direccion;
 	}
 
+
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
 
 	public String getCorreo() {
 		return correo;
 	}
 
+
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
+
 
 	public String getGenero() {
 		return genero;
 	}
 
+
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
 
-	public Date getFecha_nac() {
+
+	public Date getFechadenacimiento() {
 		return fechadenacimiento;
 	}
+
 
 	public void setFechadenacimiento(Date fechadenacimiento) {
 		this.fechadenacimiento = fechadenacimiento;
 	}
 
-	public String getTelefono() {
-		return telefono;
-	}
-	
-	
 
-
-
-
-	public TipoUsuario getUsuario() {
+	public TipoUsuario getTipoUsuario() {
 		return tipoUsuario;
 	}
-
 
 
 	public void setTipoUsuario(TipoUsuario tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
-
 
 
 	@Override
@@ -167,6 +176,6 @@ public class Cliente {
 
 
 
-
+	
 
 }

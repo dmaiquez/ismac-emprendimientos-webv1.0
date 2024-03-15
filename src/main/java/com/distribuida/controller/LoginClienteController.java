@@ -19,7 +19,6 @@ import com.distribuida.entities.Cliente;
 import com.distribuida.entities.loginCliente;
 
 
-
 @Controller
 @RequestMapping("/loginclientes")
 public class LoginClienteController {
@@ -76,6 +75,8 @@ public class LoginClienteController {
 		
 		return "redirect:/loginclientes/findAll";
 	}
+
+	
 	
 	@GetMapping("/del")
 	public String del( @RequestParam("id") @Nullable Integer id){

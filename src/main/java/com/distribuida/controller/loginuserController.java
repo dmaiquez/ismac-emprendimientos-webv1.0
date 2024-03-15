@@ -23,6 +23,7 @@ public class loginuserController {
 	
 	@Autowired
 	private LoginuserDTO loginuserDTO;
+
 	
 	@GetMapping("/findAll")
 	public String findAll(Model model) {
@@ -44,6 +45,7 @@ public String findOne(@RequestParam("id_user") @Nullable Integer id_user
 	if(opcion == 1) return "loginuser-add";
 	else return "loginuser-del";
 }
+
 @PostMapping("/add")
 public String add(@RequestParam("id_user") @Nullable Integer id
 		,@RequestParam("user") @Nullable String user
@@ -66,7 +68,7 @@ public String add(@RequestParam("id_user") @Nullable Integer id
 }
 
 @GetMapping("/del")
-public String del( @RequestParam("id") @Nullable Integer id){	
+public String del( @RequestParam("id_user") @Nullable Integer id){	
 loginuserDTO.del(id);
 return "redirect:/loginuser/findAll";
 
